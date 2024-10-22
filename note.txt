@@ -1,0 +1,11 @@
+
+
+
+<MyRouter>
+
+url--> 
+chuldren --->> array
+<Router>  
+<Route path=""  componet=""
+
+</Router>
