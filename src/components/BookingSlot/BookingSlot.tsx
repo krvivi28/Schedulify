@@ -123,6 +123,7 @@ const BookingSlot: React.FC<IPropsBookingSlot> = ({
 
       {((selectedSlot && !selectedSlot?.isBooked) || isEditing) && (
         <BookingForm
+          btnLabel={isEditing ? "Update Slot" : "Book Slot"}
           data={
             isEditing
               ? selectedSlot?.bookingDetails
@@ -134,22 +135,6 @@ const BookingSlot: React.FC<IPropsBookingSlot> = ({
           getbookingDetails={handleNewBooking}
         />
       )}
-
-      {/* {(selectedSlot && !selectedSlot?.isBooked) ||
-        isEditing ||
-        (isEditing && (
-          <BookingForm
-            data={
-              isEditing
-                ? selectedSlot?.bookingDetails
-                : {
-                    title: "",
-                    emails: [],
-                  }
-            }
-            getbookingDetails={handleNewBooking}
-          />
-        ))} */}
 
       {selectedSlot?.isBooked && (
         <div className="mt-4 bg-green-50 p-4 rounded-lg relative">

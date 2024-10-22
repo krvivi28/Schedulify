@@ -6,6 +6,7 @@ import { BookingDetails } from "../BookingSlot/BookingSlot";
 interface IPropsBookingForm {
   getbookingDetails: (details: any) => void;
   data?: BookingDetails;
+  btnLabel?: string;
 }
 
 const BookingForm: React.FC<IPropsBookingForm> = ({
@@ -14,6 +15,7 @@ const BookingForm: React.FC<IPropsBookingForm> = ({
     title: "",
     emails: [],
   },
+  btnLabel = "Book Slot",
 }) => {
   const [bookingDetails, setBookingDetails] = useState<BookingDetails>(data);
 
@@ -51,7 +53,7 @@ const BookingForm: React.FC<IPropsBookingForm> = ({
           });
         }}
       >
-        Book Slot
+        {btnLabel}
       </Button>
     </div>
   );
